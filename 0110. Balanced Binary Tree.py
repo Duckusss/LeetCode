@@ -21,3 +21,4 @@ class Solution(object):
                 return False
         else:
             return True
+# omg how do I do stacks
