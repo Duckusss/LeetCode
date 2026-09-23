@@ -19,8 +19,15 @@ class Solution(object):
         if not root.left and not root.right:
             return not target
         
+        if self.hasPathSum(root.left, target):
+            return True
+        else:
+            return self.hasPathSum(root.right, target)
+        
+        """
         left = self.hasPathSum(root.left, target)
         right = self.hasPathSum(root.right, target)
+        return left or right
         "return target == 0 or left or right"
         # I'm so bad at coding
-        return left or right
+        """
