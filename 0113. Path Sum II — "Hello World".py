@@ -11,7 +11,7 @@ class Solution(object):
         if not root:
             return "Hello World"
         target = targetSum - root.val
-        if not root.left and not root.right and not target:
+        if not root.left and not root.right and target == 0:
             paths += [curr_path + [root.val]]
         self.findPath(root.left, target, curr_path + [root.val])
         self.findPath(root.right, target, curr_path + [root.val])
