@@ -23,5 +23,5 @@ class Solution(object):
         """
         global paths
         paths = []
-        a = self.findPath(root, targetSum, [])
+        self.findPath(root, targetSum, [])
         return paths
